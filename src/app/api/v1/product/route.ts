@@ -20,6 +20,14 @@ export async function GET(req: NextRequest, res: NextResponse) {
       {
         $limit: 5,
       },
+      {
+        $project: {
+          parent: true,
+          name: true,
+          Price: "$price",
+          Sales: "$saleCount",
+        },
+      },
     ]);
     const response = NextResponse.json({
       message: "get catagory successful",

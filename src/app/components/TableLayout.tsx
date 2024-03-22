@@ -29,8 +29,8 @@ const TableLayout = ({ dataProductList }: any) => {
               >
                 {row?.name}
               </th>
-              <td className="px-6 py-4">{row?.price}</td>
-              <td className="px-6 py-4">{row?.saleCount}</td>
+              <td className="px-6 py-4">{row?.Price}</td>
+              <td className="px-6 py-4">{row?.Sales}</td>
             </tr>
           ))}
         </tbody>

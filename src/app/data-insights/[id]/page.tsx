@@ -123,8 +123,8 @@ export default function DataInsights() {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="price" stroke="#8884d8" />
-            <Line type="monotone" dataKey="saleCount" stroke="#82ca9d" />
+            <Line type="monotone" dataKey="Price" stroke="#8884d8" />
+            <Line type="monotone" dataKey="Sales" stroke="#82ca9d" />
           </LineChart>
         </ResponsiveContainer>
         <h1 className="text-4xl mt-10 mb-5">Data Insights</h1>
@@ -146,12 +146,12 @@ export default function DataInsights() {
             <Tooltip />
             <Legend />
             <Bar
-              dataKey="price"
+              dataKey="Price"
               fill="#8884d8"
               activeBar={<Rectangle fill="pink" stroke="blue" />}
             />
             <Bar
-              dataKey="saleCount"
+              dataKey="Sales"
               fill="#82ca9d"
               activeBar={<Rectangle fill="gold" stroke="purple" />}
             />
