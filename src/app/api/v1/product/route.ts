@@ -6,9 +6,21 @@ connect();
 
 export async function GET(req: NextRequest, res: NextResponse) {
   try {
-    const catagory = await Product.find({
-      parent: req.nextUrl.searchParams.get("parent"),
-    });
+    const catagory = await Product.aggregate([
+      {
+        $match: {
+          parent: req.nextUrl.searchParams.get("parent"),
+        },
+      },
+      {
+        $sort: {
+          saleCount: -1,
+        },
+      },
+      {
+        $limit: 5,
+      },
+    ]);
     const response = NextResponse.json({
       message: "get catagory successful",
       success: true,

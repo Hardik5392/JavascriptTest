@@ -7,7 +7,7 @@ export const getDatasets = async (apiEndpoint?: string) => {
 
 export const getProductDatasets = async (
   apiEndpoint?: string,
-  request: AxiosRequestConfig
+  request?: AxiosRequestConfig
 ) => {
   return get(`${apiEndpoint}`, { ...request }, false);
 };

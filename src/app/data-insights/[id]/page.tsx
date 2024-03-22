@@ -89,11 +89,11 @@ export default function DataInsights() {
     })
       .then((res) => {
         setDataProductList(res?.data);
-        setIsLoading(false)
+        setIsLoading(false);
       })
       .catch((err) => console.log("err", err));
   }, []);
-  if (isLoading) return <Loader />
+  if (isLoading) return <Loader />;
   return (
     <div className="flex min-h-screen flex-col items-center p-24 py-10">
       <div className="flex justify-between w-full items-center">
@@ -107,7 +107,7 @@ export default function DataInsights() {
       </div>
       <TableLayout dataProductList={dataProductList} />
       <div className="flex flex-col w-full items-center justify-center min-h-screen mt-10">
-        <h1 className="text-4xl mb-5">Data Insights 01</h1>
+        <h1 className="text-4xl mb-5">Data Insights</h1>
         <ResponsiveContainer width="100%" height={300}>
           <LineChart
             data={dataProductList}
