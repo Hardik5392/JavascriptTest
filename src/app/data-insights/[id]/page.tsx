@@ -91,7 +91,7 @@ export default function DataInsights() {
         setDataProductList(res?.data);
         setIsLoading(false);
       })
-      .catch((err) => console.log("err", err));
+      .catch((err) => setIsLoading(false));
   }, []);
   if (isLoading) return <Loader />;
   return (
