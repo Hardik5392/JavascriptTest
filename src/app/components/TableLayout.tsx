@@ -13,7 +13,7 @@ const TableLayout = ({ dataProductList }: any) => {
               Price
             </th>
             <th scope="col" className="px-6 py-3">
-              Sales count
+              Sales count ($)
             </th>
           </tr>
         </thead>
